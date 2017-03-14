@@ -1169,6 +1169,7 @@ void pesquisarc(FILE* arq){
     if(arq == NULL)
     {
     	printf("NÃO EXISTE CLIENTES CADASTRADOS!");
+	getchar();
 	}
 	else
 	{
