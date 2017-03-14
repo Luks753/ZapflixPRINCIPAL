@@ -895,7 +895,7 @@ void configc(FILE *arq){
 
 
     int op, sair;
-
+    sair = 0;
     do{
         system("cls");
         printf("\t\t**********************************\n");
@@ -1082,7 +1082,7 @@ void editarc(FILE* arq){
             if(op == 2)
             {
                 setbuf(stdin, NULL);
-                excluir(arq);
+                excluirc(arq);
                 break;
             }
             if(op == 3)
@@ -1169,7 +1169,6 @@ void pesquisarc(FILE* arq){
     if(arq == NULL)
     {
     	printf("NÃO EXISTE CLIENTES CADASTRADOS!");
-	getchar();
 	}
 	else
 	{
