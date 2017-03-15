@@ -60,19 +60,79 @@ void loading(){
 
     switch(val){
         case 1:
-            printf("\n\n\tO primeiro filme inteiramente rodado a cores foi \"Becky Sharp\",\n\tde Rouben Mamoulian, produzido pela RKO em 1935.");
+            printf("                                                               .---.\n");
+            printf("                                                              /  .  \\\n");
+            printf("                                                             |\\_/|   |\n");
+            printf("                                                             |   |  /|\n");
+            printf("  .----------------------------------------------------------------' |\n");
+            printf(" /  .-.                                                              |\n");
+            printf("|  /   \\     O primeiro filme inteiramente rodado a cores foi        |\n");
+            printf("| |\\_.  |         \"Becky Sharp\", de Rouben Mamoulian                 |\n");
+            printf("|\\|  | /|                                                            |\n");
+            printf("| `---' |              produzido pela RKO em 1935.                   |\n");
+            printf("|       |                                                            |\n");
+            printf("|       |                                                           /\n");
+            printf("|       |----------------------------------------------------------'\n");
+            printf("\\       |\n");
+            printf(" \\     /\n");
+            printf("  `---'\n");
             break;
 
         case 2:
-           printf("\n\n\tA maior indústria cinematográfica do mundo pertence à Índia.\n\tO País produz uma média de 700 filmes todos os anos.");
+            printf("                                                               .---.\n");
+            printf("                                                              /  .  \\\n");
+            printf("                                                             |\\_/|   |\n");
+            printf("                                                             |   |  /|\n");
+            printf("  .----------------------------------------------------------------' |\n");
+            printf(" /  .-.                                                              |\n");
+            printf("|  /   \\                                                             |\n");
+            printf("| |\\_.  |A maior indústria cinematográfica do mundo pertence à Índia |\n");
+            printf("|\\|  | /|                                                            |\n");
+            printf("| `---' |    O País produz uma média de 700 filmes todos os anos.    |\n");
+            printf("|       |                                                            |\n");
+            printf("|       |                                                           /\n");
+            printf("|       |----------------------------------------------------------'\n");
+            printf("\\       |\n");
+            printf(" \\     /\n");
+            printf("  `---'\n");
            break;
 
         case 3:
-            printf("\n\n\tA expressão \"sétima arte\", foi criada em 1912\n\tpelo italiano Ricciotto Canuto, se referindo ao cinema.");
+            printf("                                                               .---.\n");
+            printf("                                                              /  .  \\\n");
+            printf("                                                             |\\_/|   |\n");
+            printf("                                                             |   |  /|\n");
+            printf("  .----------------------------------------------------------------' |\n");
+            printf(" /  .-.                                                              |\n");
+            printf("|  /   \\                                                             |\n");
+            printf("| |\\_.  |      A expressão \"sétima arte\", foi criada em 1912         |\n");
+            printf("|\\|  | /|                                                            |\n");
+            printf("| `---' |   pelo italiano Ricciotto Canuto, se referindo ao cinema.  |\n");
+            printf("|       |                                                            |\n");
+            printf("|       |                                                           /\n");
+            printf("|       |----------------------------------------------------------'\n");
+            printf("\\       |\n");
+            printf(" \\     /\n");
+            printf("  `---'\n");
             break;
 
         case 4:
-            printf("\n\n\t\"Scarface\" (Brian De Palma, 1983), remake do filme de 1932\n\trealizado por Howard Hughes, é o filme com mais palavrões,\n\tum total de 203, uma média de um palavrão a cada 29 segundos.");
+            printf("                                                               .---.\n");
+            printf("                                                              /  .  \\\n");
+            printf("                                                             |\\_/|   |\n");
+            printf("                                                             |   |  /|\n");
+            printf("  .----------------------------------------------------------------' |\n");
+            printf(" /  .-.                                                              |\n");
+            printf("|  /   \\                                                             |\n");
+            printf("| |\\_.  | \"Scarface\" (Brian De Palma, 1983), remake do filme de 1932 |\n");
+            printf("|\\|  | /| realizado por Howard Hughes, é o filme com mais palavrões  |\n");
+            printf("| `---' |   O País produz uma média de 700 filmes todos os anos.     |\n");
+            printf("|       |  um total de 203, uma média de um palavrão a cada 29 seg.  |\n");
+            printf("|       |                                                           /\n");
+            printf("|       |----------------------------------------------------------'\n");
+            printf("\\       |\n");
+            printf(" \\     /\n");
+            printf("  `---'\n");
             break;
 
     }
@@ -100,7 +160,8 @@ void loading(){
 
    printf ("\n\nFinalizando...");
    Sleep (2000);
-   printf ("\r \t\t\t\t  CARREGADO\n\n\n");
+   printf ("\t\t\tCARREGADO\n\n\n");
+   printf("\nPressione qualquer tecla para continuar...");
 
 }
 
@@ -126,7 +187,7 @@ void pesquisarf(FILE *filmes){
     }
 
     if(k == 0){
-        printf("Filme não encontrado");
+        printf("Filme não encontrado...");
     }
     getchar();
 
@@ -158,22 +219,22 @@ void cadastrarf(FILE *filmes){
     filmes = fopen("Arquivos\\filmes.txt", "rb");
     fread(&movie, sizeof(movie), 1, filmes);
     fclose(filmes);
-    printf("DIGITE O NOME DO FILME:(sem acentos)\n");
+    printf("DIGITE O NOME DO FILME (sem acentos): \n");
     gets(nome);
 
     for(i=0; i<200; i++){
         if((movie[i].ano == 0) && (strcmp(movie[i].nome, nome) != 0)){
             strcpy(movie[i].nome, nome);
-            printf("DIGITE O ANO DO FILME:(sem acentos)\n");
+            printf("DIGITE O ANO DO FILME: \n");
             scanf("%i", &movie[i].ano);
             fflush(stdin);
-            printf("DIGITE O NOME DO DIRETOR DO FILME:(sem acentos)\n");
+            printf("DIGITE O NOME DO DIRETOR DO FILME (sem acentos): \n");
             gets(movie[i].diretor);
-            printf("DIGITE A SINOPSE DO FILME:(sem acentos)\n ");
+            printf("DIGITE A SINOPSE DO FILME (sem acentos): \n ");
             gets(movie[i].sinopse);
-            printf("DIGITE A CATEGORIA DO FILME:(sem acentos)\n");
+            printf("DIGITE A CATEGORIA DO FILME (sem acentos): \n");
             gets(movie[i].categoria);
-            printf("ESCOLHA A EXCLUSIVIDADE DO FILME:    1 - VIP     2 - NORMAL\n");
+            printf("ESCOLHA A EXCLUSIVIDADE DO FILME:    (1) VIP     (2) NORMAL\n");
             scanf("%i", &vip);
             fflush(stdin);
             switch(vip){
@@ -188,7 +249,7 @@ void cadastrarf(FILE *filmes){
             break;
             }
         if(strcmp(movie[i].nome, nome) == 0){
-            printf("\nO FILME JÁ SE ENCONTRA NO CATÁLOGO OU ESTÁ DESATIVADO\n");
+            printf("\nO FILME JÁ SE ENCONTRA NO CATÁLOGO OU ESTÁ DESATIVADO...\n");
             getchar();
             break;
         }
@@ -208,11 +269,11 @@ void excluirf(FILE *filmes, char pesquisa[50]){
     for(i=0; i<200; i++){
         if(strcmp(pesquisa, movie[i].nome) == 0){
             printf("\nTem certeza que deseja remover esse filme?\n");
-            printf("           1 - Sim        2 - Não\n\n");
+            printf("           (1) Sim        (2) Não\n\n");
             scanf("%i", &remo);
             fflush(stdin);
             if(remo == 1){
-                printf("\n\nFilme removido\n");
+                printf("\n\nFilme removido!\n");
                 movie[i].ativo = 0;
             }
             if(remo != 1){
@@ -236,11 +297,11 @@ void reativarf(FILE *filmes, char pesquisa[50]){
     for(i=0; i<200; i++){
         if(strcmp(pesquisa, movie[i].nome) == 0){
             printf("\nTem certeza que deseja reativar esse filme?\n");
-            printf("           1 - Sim        2 - Não\n\n");
+            printf("           (1) Sim        (2) Não\n\n");
             scanf("%i", &remo);
             fflush(stdin);
             if(remo == 1){
-                printf("\n\nFilme reativado\n");
+                printf("\n\nFilme reativado!\n");
                 movie[i].ativo = 1;
             }
             if(remo != 1){
@@ -271,14 +332,14 @@ void Logar(FILE *arq, FILE *f, FILE *filmes, FILE *log, FILE *logi){
     do{
     system("cls");
     tela1();
-    printf("\n\t\t\tLogin: ");
+    printf("\n\t\t\t\tLogin: ");
     gets(id);
-    printf("\n\t\t\tSenha: ");
+    printf("\n\t\t\t\tSenha: ");
     gets(sn);
     k=0;
     if((strcmp(lgn.senha, sn) == 0) && (strcmp(lgn.login, id) == 0)){
         system("cls");
-        printf("\n\n\t\t\t************************\n");
+        printf("\a\n\n\t\t\t************************\n");
         printf("\t\t\t*  LOGADO COM SUCESSO  *\n");
         printf("\t\t\t************************\n\n");
         k = 1;
@@ -289,7 +350,7 @@ void Logar(FILE *arq, FILE *f, FILE *filmes, FILE *log, FILE *logi){
     for(i=0;i<200;i++){
         if((strcmp(lon[i].senha, sn) == 0) && (strcmp(lon[i].login, id) == 0)){
             system("cls");
-            printf("\n\n\t\t\t************************\n");
+            printf("\a\n\n\t\t\t************************\n");
             printf("\t\t\t*  LOGADO COM SUCESSO  *\n");
             printf("\t\t\t************************\n\n");
             strcpy(cp, lon[i].nome);
@@ -300,23 +361,23 @@ void Logar(FILE *arq, FILE *f, FILE *filmes, FILE *log, FILE *logi){
     for(i=0;i<200;i++){
         if(((strcmp(lon[i].senha, sn) != 0) || (strcmp(lon[i].login, id) != 0)) && (k != 1)){
             system("cls");
-            printf("\n\n\t\t\t@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+            printf("\a\n\n\t\t\t@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
             printf("\t\t\t@   LOGIN OU SENHA INCORRETO   @\n");
             printf("\t\t\t@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n");
+            printf("\nPressione qualquer tecla para continuar...");
             getchar();
             break;
         }
     }
     }while(k != 1);
 
+    printf("\nPressione qualquer tecla para continuar...");
     getchar();
     system("cls");
     loading();
     getchar();
     system("cls");
     tela2(arq, f, filmes, cp);
-
-
 }
 
 void tela1(){
@@ -324,7 +385,7 @@ void tela1(){
     printf("\t   @@  @@  @@ @@   @@  @@@        @@@      @@@     @@@@  @@@@\n");
     printf("\t  @@   @@  @@ @@@@@@   @@@@@@@@   @@@      @@@      @@@@@@@@\n");
     printf("\t @@    @@@@@@ @@       @@@        @@@      @@@     @@@@  @@@@\n");
-    printf("\t@@@@@@ @@  @@ @@       @@@        @@@@@@@  @@@    @@@@    @@@@\n");
+    printf("\t@@@@@@ @@  @@ @@       @@@        @@@@@@@  @@@    @@@@    @@@@\n\n\n");
 
 
 }
@@ -336,45 +397,50 @@ void tela2(FILE *arq, FILE *f, FILE *filmes, char cp[20]){
     int acao, sair;
     sair = 0;
     do{
-    system("color BD");
-    filme movie[200];
-    filmes = fopen("Arquivos\\filmes.txt", "rb");
-    fread(&movie, sizeof(movie), 1, filmes);
-    fclose(filmes);
-    system("cls");
-    printf("Logado como: %s\n", cp);
-    printf("\t\t\t\t\t\t************************\n");
-    printf("\t\t\t\t\t\t* BEM VINDO AO ZAPFLIX *\n");
-    printf("\t\t\t\t\t\t************************\n");
-    printf("\t\tMENU\n");
-    printf("1 - Configurações dos Clientes\t\t2 - Configurações dos Filmes\n");
-    printf("3 - Configurações dos Funcionários\t4 - Busca\n");
-    printf("5 - Catálogo de filmes\t\t\t6 - Sair\n\n");
-    scanf("%i", &acao);
-    fflush(stdin);
+        system("color BD");
+        filme movie[200];
+        filmes = fopen("Arquivos\\filmes.txt", "rb");
+        fread(&movie, sizeof(movie), 1, filmes);
+        fclose(filmes);
+        system("cls");
+        printf("Logado como: %s\n\n", cp);
+        printf("\t. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-\n");
+        printf("\t`-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-'\n");
+        printf("\t\t\t  BEM VINDO AO ZAPFLIX\n");
+        printf("\t. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-. ,-\n");
+        printf("\t`-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-' `-'\n\n\n");
+        printf("\t---- MENU ----\n\n");
+        printf("[1] Configurações dos Clientes\t\t[2] Configurações dos Filmes\n\n");
+        printf("[3] Configurações dos Funcionários\t[4] Busca\n\n");
+        printf("[5] Catálogo de filmes\t\t\t[6] Sair\n\n");
+        printf("\nDigite a opção desejada: ");
+        scanf("%i", &acao);
+        fflush(stdin);
 
-    switch(acao){
-        case 1:
-            configc(arq);
-            break;
-        case 2:
-            configf(filmes);
-            break;
-        case 3:
-            configfun(f);
-            break;
-        case 4:
-            pesquisar(arq, f, filmes);
-            break;
-        case 5:
-            catalogo(filmes);
-            break;
-        case 6:
-            printf("\n\n\nDeseja realmente sair do programa?\n");
-            printf("      1 - Sim        2 - Não\n\n");
-            scanf("%i", &sair);
-            break;
-    }
+        switch(acao){
+            case 1:
+                configc(arq);
+                break;
+            case 2:
+                configf(filmes);
+                break;
+            case 3:
+                configfun(f);
+                break;
+            case 4:
+                pesquisar(arq, f, filmes);
+                break;
+            case 5:
+                catalogo(filmes);
+                break;
+            case 6:
+                printf("\nDeseja realmente sair do programa? (1)Sim/(2)Não: ");
+                scanf("%i", &sair);
+                break;
+            default:
+                printf("\n\nOpção inválida, tente novamente...");
+                getchar();
+        }
     }while(sair != 1);
 
 }
@@ -384,13 +450,14 @@ void catalogo(FILE *filmes){
     int acao, sair;
     char pesquisa[50];
     system("cls");
-    printf("Escolha a categoria do filme.\n");
-    printf("1 - Ação\t\t\t2 - Brasileiro\n");
-    printf("3 - Comédia\t\t\t4 - Desenho\n");
-    printf("5 - Drama\t\t\t6 - Ficção Científica\n");
-    printf("7 - Infantil\t\t\t8 - Romance\n");
-    printf("9 - Série\t\t\t10 - Terror\n");
-    printf("\t\t11 - VOLTAR\n\n");
+    printf("\t\tCATEGORIAS DE FILMES\n\n");
+    printf("[1] Ação\t\t\t[2] Brasileiro\n");
+    printf("[3] Comédia\t\t\t[4] Desenho\n");
+    printf("[5] Drama\t\t\t[6] Ficção Científica\n");
+    printf("[7] Infantil\t\t\t[8] Romance\n");
+    printf("[9] Série\t\t\t[10] Terror\n\n");
+    printf("\t\t[11] VOLTAR\n\n\n");
+    printf("Selecione a categoria do filme: ");
     scanf("%i", &acao);
     fflush(stdin);
     switch(acao){
@@ -435,8 +502,7 @@ void catalogo(FILE *filmes){
             listarf(filmes, pesquisa);
             break;
         case 11:
-            printf("\n\n\nDeseja realmente voltar?\n");
-            printf("       1 - Sim       2 - Não\n\n");
+            printf("\nDeseja realmente voltar? (1)Sim/(2)Não: ");
             scanf("%i", &sair);
             fflush(stdin);
             break;
@@ -459,13 +525,14 @@ void editarf(FILE *filmes){
         if(strcmp(pesquisa, movie[i].nome) == 0){
             printf("\nNome: %s\nExclusividade: %s\nAno: %i\nDiretor: %s\nCategoria: %s\nSinopse: %s\n\n", movie[i].nome, movie[i].exclu, movie[i].ano, movie[i].diretor, movie[i].categoria, movie[i].sinopse);
             printf("O que deseja editar do filme?\n\n");
-            printf("1 - Nome\n");
-            printf("2 - Ano\n");
-            printf("3 - Diretor\n");
-            printf("4 - Categoria\n");
-            printf("5 - Sinopse\n");
-            printf("6 - Remover filme\n");
-            printf("7 - Reativar filme\n\n");
+            printf("(1) Nome\n");
+            printf("(2) Ano\n");
+            printf("(3) Diretor\n");
+            printf("(4) Categoria\n");
+            printf("(5) Sinopse\n");
+            printf("(6) Remover filme\n");
+            printf("(7) Reativar filme\n\n");
+            printf("Digite a opção desejada: ");
             scanf("%i", &remo);
             fflush(stdin);
             k = 1;
@@ -528,34 +595,33 @@ void configf(FILE *filmes){
 
     int acao, sair;
     do{
-    system("cls");
-    printf("\t\t\t******************************\n");
-    printf("\t\t\t* MENU DE EDIÇÃO DOS FILMES  *\n");
-    printf("\t\t\t******************************\n\n\n");
-    printf("1 - Cadastrar\n");
-    printf("2 - Editar\n");
-    printf("3 - Voltar\n\n");
-    printf("Digite a função desejada: ");
-    scanf("%i", &acao);
-    fflush(stdin);
+        system("cls");
+        printf("\t.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.\n");
+        printf("\t\t\t MENU DE EDIÇÃO DOS FILMES  \n");
+        printf("\t.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.\n\n\n");
+        printf("[1] Cadastrar\n");
+        printf("[2] Editar\n");
+        printf("[3] Voltar\n\n");
+        printf("Digite a opção desejada: ");
+        scanf("%i", &acao);
+        fflush(stdin);
 
-    switch(acao){
-        case 1:
-            system("cls");
-            cadastrarf(filmes);
-            break;
-        case 2:
-            system("cls");
-            editarf(filmes);
-            getchar();
-            break;
-        case 3:
-            printf("\n\n\nDeseja realmente voltar?\n");
-            printf("       1 - Sim       2 - Não\n\n");
-            scanf("%i", &sair);
-            fflush(stdin);
-            break;
-    }
+        switch(acao){
+            case 1:
+                system("cls");
+                cadastrarf(filmes);
+                break;
+            case 2:
+                system("cls");
+                editarf(filmes);
+                getchar();
+                break;
+            case 3:
+                printf("\nDeseja realmente voltar? (1)Sim/(2)Não: ");
+                scanf("%i", &sair);
+                fflush(stdin);
+                break;
+        }
     }while(sair != 1);
 
 }
@@ -585,7 +651,7 @@ void cadastrarfun(FILE *f){
 
     system("cls");
     setlocale(LC_ALL, "Portuguese");
-    int i, j;
+    int i;
     Dados funcionario[200];
     f = fopen("Arquivos\\funcionario.txt", "rb");
     fread(&funcionario,sizeof(funcionario),1,f);
@@ -593,18 +659,18 @@ void cadastrarfun(FILE *f){
 
     for(i=0;i<200;i++){
         if(funcionario[i].cadastrado == 0){
-            printf("Digite o nome do funcionário:(sem acentos)\n");
+            printf("Digite o nome do funcionário(sem acentos): \n");
             gets(funcionario[i].nome);
-            printf("Digite o cargo do funcionário:(sem acentos)\n");
+            printf("Digite o cargo do funcionário(sem acentos): \n");
             gets(funcionario[i].cargo);
-            printf("Digite o CPF do funcionário:(no formato 123.456.789-10)\n");
+            printf("Digite o CPF do funcionário(no formato 123.456.789-10): \n");
             gets(funcionario[i].cpf);
-            printf("Digite o salário do funcionário:\n");
+            printf("Digite o salário do funcionário: \n");
             scanf("%i", &funcionario[i].salario);
             fflush(stdin);
-            printf("Digite um nome de usuário:(sem acentos)\n");
+            printf("Digite um nome de usuário(sem acentos): \n");
             gets(funcionario[i].login);
-            printf("Digite uma senha:(sem acentos)\n");
+            printf("Digite uma senha(sem acentos): \n");
             gets(funcionario[i].senha);
             funcionario[i].status = 1;
             funcionario[i].cadastrado = 1;
@@ -627,7 +693,7 @@ void pesquisarfun(FILE *f){
     f = fopen("Arquivos\\funcionario.txt", "rb");
     fread(&funcionario, sizeof(funcionario),1, f);
     fclose(f);
-    printf("Digite o cpf do funcionário(no formato 123.456.789-10)::\n");
+    printf("Digite o cpf do funcionário(no formato 123.456.789-10): \n");
     gets(pesquisa);
     for(i=0;i<200;i++){
 
@@ -652,6 +718,7 @@ void pesquisarfun(FILE *f){
         if(k==0){
                     printf("\nSem resultados...\n");
                     printf("\nPressione ENTER para retornar...\n");
+                    getchar();
         }
 }
 
@@ -664,7 +731,7 @@ void excluirfun(FILE *f){
     f = fopen("Arquivos\\funcionario.txt", "rb");
     fread(&funcionario, sizeof(funcionario),1, f);
     fclose(f);
-	printf("Digite o cpf do funcionário:\n");
+	printf("Digite o cpf do funcionário: \n");
     gets(pesquisa);
 
 
@@ -678,7 +745,7 @@ void excluirfun(FILE *f){
                 printf("Cargo : %s\n", funcionario[i].cargo);
                 printf("---------------\n");
 
-		printf("\nDeseja realmente excluir este funcionário?\n(1)Sim;(2)Não;\n");
+		printf("\nDeseja realmente excluir este funcionário? (1)Sim / (2)Não: \n");
 		scanf("%i", &exc);
 
 			if(exc == 1){
@@ -699,14 +766,15 @@ void pesquisar(FILE *arq, FILE *f, FILE *filmes){
     int c, i;
     do{
     system("cls");
-    printf("\t\t*************************\n");
-    printf("\t\t*    TELA  DE  BUSCA    *\n");
-    printf("\t\t*************************\n\n");
-    printf("O que deseja buscar?\n");
-    printf("1 - Cliente\n");
-    printf("2 - Filme\n");
-    printf("3 - Funcionário\n");
-    printf("4 - Voltar\n\n");
+    printf("\t_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_\n");
+    printf("\t\t\t    TELA  DE  BUSCA    \n");
+    printf("\t_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_\n\n\n");
+    printf("O que deseja buscar?\n\n");
+    printf("[1] Cliente\n");
+    printf("[2] Filme\n");
+    printf("[3] Funcionário\n");
+    printf("[4] Voltar\n\n");
+    printf("Digite a opção desejada: ");
     scanf("%i", &c);
     fflush(stdin);
 
@@ -727,8 +795,7 @@ void pesquisar(FILE *arq, FILE *f, FILE *filmes){
             getchar();
             break;
         case 4:
-            printf("\n\n\nDeseja realmente voltar?\n");
-            printf("       1 - Sim       2 - Não\n\n");
+            printf("\nDeseja realmente voltar? (1)Sim/(2)Não: ");
             scanf("%i", &i);
             fflush(stdin);
             break;
@@ -744,10 +811,6 @@ void pesquisar(FILE *arq, FILE *f, FILE *filmes){
 
 void editarfun(FILE *f){
 
-
-
-
-
     system("cls");
     Dados funcionario[200];
     char pesquisa[50];
@@ -756,7 +819,8 @@ void editarfun(FILE *f){
     f = fopen("Arquivos\\funcionario.txt", "rb");
     fread(&funcionario, sizeof(funcionario),1,f);
     fclose(f);
-    printf("Digite o CPF do funcionário que deseja alterar:(no formato 123.456.789-10) \n");
+    fflush(stdin);
+    printf("Digite o CPF do funcionário que deseja alterar(no formato 123.456.789-10): \n");
     gets(pesquisa);
 
     for(i=0;i<200;i++){
@@ -772,13 +836,13 @@ void editarfun(FILE *f){
                         printf("Login : %s\n", funcionario[i].login);
                         printf("--------------\n");
                         printf("\nO que deseja alterar ?\n");
-                        printf("(1)-Nome;\n");
-                        printf("(2)-Cargo;\n");
-                        printf("(3)-CPF;\n");
-                        printf("(4)-Salário;\n");
-                        printf("(5)-Login;\n");
-                        printf("(6)-Senha;\n");
-                        printf("(7)-Excluir funcionário;\n");
+                        printf("(1) Nome;\n");
+                        printf("(2) Cargo;\n");
+                        printf("(3) CPF;\n");
+                        printf("(4) Salário;\n");
+                        printf("(5) Login;\n");
+                        printf("(6) Senha;\n");
+                        printf("(7) Excluir funcionário;\n");
                         scanf("%i", &naveg);
                         fflush(stdin);
 
@@ -856,13 +920,14 @@ void configfun(FILE *f){
 
     do{
         system("cls");
-        printf("\t\t**********************************\n");
-        printf("\t\t* MENU DE EDIÇÃO DE FUNCIONÁRIOS *\n");
-        printf("\t\t**********************************\n\n\n");
+        printf("\t.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.\n");
+        printf("\t\t\t MENU DE EDIÇÃO DE FUNCIONÁRIOS \n");
+        printf("\t.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.\n\n\n");
 
-        printf("(1)-Cadastrar;\n");
-        printf("(2)-Editar;\n");
-        printf("(3)-Voltar;\n\n");
+        printf("[1] Cadastrar\n");
+        printf("[2] Editar\n");
+        printf("[3] Voltar\n\n");
+        printf("Digite a opção desejada: ");
         scanf("%i", &op);
         fflush(stdin);
 
@@ -878,7 +943,7 @@ void configfun(FILE *f){
                      getchar();
                      break;
 
-            case 3 : printf("Deseja realmente voltar ? (1)Sim / (2)Não\n");
+            case 3 : printf("\nDeseja realmente voltar? (1)Sim/(2)Não: ");
                      scanf("%i", &sair);
                      fflush(stdin);
                      break;
@@ -895,16 +960,17 @@ void configc(FILE *arq){
 
 
     int op, sair;
-    sair = 0;
+
     do{
         system("cls");
-        printf("\t\t**********************************\n");
-        printf("\t\t*   MENU DE EDIÇÃO DE CLIENTES   *\n");
-        printf("\t\t**********************************\n\n\n");
+        printf("\t.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.\n");
+        printf("\t\t\t   MENU DE EDIÇÃO DE CLIENTES   \n");
+        printf("\t.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.\n\n\n");
 
-        printf("(1)-Cadastrar;\n");
-        printf("(2)-Editar;\n");
-        printf("(3)-Voltar;\n\n");
+        printf("[1] Cadastrar\n");
+        printf("[2] Editar\n");
+        printf("[3] Voltar\n\n");
+        printf("Digite a opção desejada: ");
         scanf("%i", &op);
         fflush(stdin);
 
@@ -920,7 +986,7 @@ void configc(FILE *arq){
                      getchar();
                      break;
 
-            case 3 : printf("Deseja realmente voltar ? (1)Sim / (2)Não\n");
+            case 3 : printf("\nDeseja realmente voltar? (1)Sim/(2)Não: ");
                      scanf("%i", &sair);
                      fflush(stdin);
                      break;
@@ -950,18 +1016,19 @@ void editarc(FILE* arq){
         int op, x, i;
         do
         {
-            printf("\n\t\t\t(1)-ALTERAR DADOS;\n\t\t\t(2)-REMOVER CLIENTE;\n\t\t\t(3)-REATIVAR CLIENTE;\n\n");
+            printf("\t\t\t(1) ALTERAR DADOS DO CLIENTE\n\t\t\t(2) REMOVER CLIENTE;\n\t\t\t(3) REATIVAR CLIENTE\n\n");
+            printf("Digite a opção desejada: ");
             scanf("%i", &op);
             if(op == 1)
             {
                 getchar();
                 char cpf[20];
-                printf("DIGITE O CPF DO CLIENTE PARA CONTINUAR:\n");
+                printf("DIGITE O CPF DO CLIENTE PARA CONTINUAR: \n");
                 gets(cpf);
                 setbuf(stdin, NULL);
                 system("cls");
                 int op1;
-                printf("\t\t\tO QUE DESEJA ALTERAR?\n\t\t\t(1)-NOME;\n\t\t\t(2)-CPF;\n\t\t\t(3)-DATA DE NASCIMENTO;\n\t\t\t(4)-ENDEREÇO;\n\t\t\t(5)-TIPO DE CONTA\n\n");
+                printf("\t\t\tO QUE DESEJA ALTERAR?\n\t\t\t(1) NOME\n\t\t\t(2) CPF\n\t\t\t(3) DATA DE NASCIMENTO\n\t\t\t(4) ENDEREÇO\n\t\t\t(5) TIPO DE CONTA\n\n");
                 scanf("%i", &op1);
                 getchar();
                 system("cls");
@@ -1030,17 +1097,17 @@ void editarc(FILE* arq){
                         char bairro[50];
                         char rua[50];
                         char cidade[50];
-                        printf("DIGITE O NOVO ENDEREÇO:\nCIDADE: ");
+                        printf("\nDIGITE O NOVO ENDEREÇO:\nCidade: ");
                         gets(cidade);
                         setbuf(stdin, NULL);
-                        printf("\nBAIRRO: ");
+                        printf("\nBairro: ");
                         setbuf(stdin, NULL);
                         gets(bairro);
                         setbuf(stdin, NULL);
-                        printf("\nRUA: ");
+                        printf("\nRua: ");
                         gets(rua);
                         setbuf(stdin, NULL);
-                        printf("\nNº DA CASA: ");
+                        printf("\nNº da casa: ");
                         scanf("%i", &num);
                         setbuf(stdin, NULL);
                         for(i = 0; i < 200; i++)
@@ -1090,7 +1157,7 @@ void editarc(FILE* arq){
                 int i;
                 setbuf(stdin, NULL);
                 char cpf[20];
-                printf("DIGITE O CPF DO CLIENTE:\n");
+                printf("DIGITE O CPF DO CLIENTE: \n");
                 gets(cpf);
                 setbuf(stdin, NULL);
                 system("cls");
@@ -1108,7 +1175,7 @@ void editarc(FILE* arq){
                 system("cls");
             }
             printf("\t\t\tOPERAÇÃO REALIZADA COM SUCESSO!\n");
-            printf("\n\t\t\tDESEJA REALIZAR OUTRA OPERAÇÃO?\n(1)-SIM\t(2)-NÃO\n");
+            printf("\n\t\t\tDESEJA REALIZAR OUTRA OPERAÇÃO?\n(1)SIM/(2)NÃO: \n");
             scanf("%i", &x);
             system("cls");
         }while(x == 1);
@@ -1117,6 +1184,7 @@ void editarc(FILE* arq){
 }
 
 void excluirc(FILE* arq){
+
 	setlocale(LC_ALL, "Portuguese");
 	Cliente a[200];
 	arq = fopen("Clientes.txt", "rb");
@@ -1136,7 +1204,7 @@ void excluirc(FILE* arq){
 		setbuf(stdin, NULL);
 		system("cls");
 		int op;
-		printf("TEM CERTEZA QUE DESEJA EXCLUIR ESSE CLIENTE? \n(1)-SIM\t(2)-NÃO\n");
+		printf("TEM CERTEZA QUE DESEJA EXCLUIR ESSE CLIENTE? (1)SIM/(2)NÃO: \n");
 		scanf("%i", &op);
 		getchar();
 		if(op == 1)
@@ -1159,6 +1227,7 @@ void excluirc(FILE* arq){
 }
 
 void pesquisarc(FILE* arq){
+
 	setlocale(LC_ALL, "Portuguese");
 	Cliente a[200];
     system("cls");
@@ -1194,9 +1263,12 @@ void pesquisarc(FILE* arq){
 			}
 		}
 	}
+
+	system("pause");
 }
 
 void cadastrarc(FILE* arq){
+
 	setlocale(LC_ALL, "Portuguese");
 	int i = 0;
 	Cliente a[200];
@@ -1210,7 +1282,7 @@ void cadastrarc(FILE* arq){
 		if(a[i].dia_nasc == 0)
 		{
 
-		printf("INSIRA OS DADOS DO CLIENTE: \n");
+		printf("INSIRA OS DADOS DO CLIENTE \n\n");
 		a[i].status = 1;
 		printf("1-NOME: \n");
 		gets(a[i].nome);
@@ -1223,21 +1295,21 @@ void cadastrarc(FILE* arq){
 		scanf("%i", &a[i].mes_nasc);
 		scanf("%i", &a[i].ano_nasc);
 		setbuf(stdin, NULL);
-		printf("4-ENDEREÇO\n");
-		printf("CIDADE: \n");
+		printf("\n4-ENDEREÇO\n");
+		printf("Cidade: \n");
 		gets(a[i].ender.cidade);
 		setbuf(stdin, NULL);
-		printf("BAIRRO: \n");
+		printf("Bairro: \n");
 		gets(a[i].ender.bairro);
 		setbuf(stdin, NULL);
-		printf("RUA: \n");
+		printf("Rua: \n");
 		gets(a[i].ender.rua);
 		setbuf(stdin, NULL);
-		printf("Nº DA CASA: \n");
+		printf("Nº da casa: \n");
 		setbuf(stdin, NULL);
 		scanf("%i", &a[i].ender.num_casa);
 		setbuf(stdin, NULL);
-		printf("TIPO DE CLIENTE:\n");
+		printf("TIPO DE CLIENTE: \n");
 		gets(a[i].tipo_cliente);
 		setbuf(stdin, NULL);
     	fclose(arq);
@@ -1247,10 +1319,21 @@ void cadastrarc(FILE* arq){
 	arq = fopen("Clientes.txt", "wb");
 	fwrite(&a, sizeof(a), 1, arq);
 	fclose(arq);
+
+	printf("\n\nCliente cadastrado com sucesso!");
+	system("pause");
 }
 
-int main(){
+void fim()
+{
+    system("cls");
+    printf("\n\nFinalizando programa...\n\n");
+}
+
+int main()
+{
     setlocale(LC_ALL, "Portuguese");
+    atexit(fim);
     FILE *filmes;
     FILE *f;
     int acao, sair;
